@@ -1,0 +1,72 @@
+===================
+= Booking system  =
+===================
+=      TO DO      =
+===================
+
+FrontEnd Tasks:
+
+	= SLIDER EVENT to ARROWS =
+
+	= SLIDER EVENT to GAME selection =
+
+	= enable RESERVATION BUTTON when GAME AND TIME selected =
+
+	= on :hover DAY-TIME <DIV> -> create CSS STYLE and JS FUNCTION to display PRICE and how many SEATS are FREE =
+
+	= when GAME selects by AJAX loads DAY-TIME <DIV> =
+
+	= collects which GAME and which TIME has been selected FURTHER STEPS -> send it to PHP script (AJAX -> JSON) =
+
+BackEnd Tasks:
+	
+	= find out how PHP GET and POST JSON messages =
+	= how work with SESSION in PHP =
+
+	= create functions returns JSON to specific URI, which will based on JSON messages from FrontEnd =
+
+TO DO: 
+    = specify logic in functions =
+
+
+
+===========================================================================================================
+ТРЕБОВАНИЯ К СИСТЕМЕ:
+
+6, 4, 2 -> show to clients
+
+dynamic prices
+synchronize google calendar
+
+------------------
+history -> google calendar;
+history -> kod poukazu
+
+poukaz 
+jazyk hry
+osobni udaje
+
+exceptions:
+delete events -> by url  /delete/12234
+
+
+
+roles of users:
+---	admin?
+---	guest?
+
+
+mindmaze.cz
+
+frontend -> AJAX -> PHP
+
+
+Google Calendar - > Admin Dashboard
+	CRUD event through google calendar -> admin dashboard
+============================================================================================================
+
+
+
+
+
+

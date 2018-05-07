@@ -1,0 +1,298 @@
+/* Common styles */
+em {
+  font-weight: 700;
+  color: #9dd72a;
+  font-style: normal;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.carousel-offset {
+  position: relative;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel-item {
+  padding: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.carousel-item.selected {
+  opacity: 1;
+}
+
+/* Loading */
+#loading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Scroll arrows */
+.scroll-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.scroll-arrow-left {
+  left: 1%;
+}
+
+.scroll-arrow-right {
+  right: 1%;
+}
+
+.scroll-arrow.active {
+  opacity: 1;
+}
+
+/* Mission picker */
+.mission-container {
+  width: 80%;
+  max-width: 300px;
+}
+
+.mission-image-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 9px;
+}
+
+.mission-carousel .mission-image {
+  border: none;
+  width: 100%;
+  padding-bottom: 75%;
+  background-size: cover;
+}
+
+.mission-image-container img {
+  display: block;
+  position: absolute;
+  max-width: 80%;
+  max-height: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mission-image-info {
+  color: #2d3915;
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.mission-image-info.primary {
+  background-color: #9dd72a;
+}
+
+.mission-image-info.secondary {
+  background-color: #eebb2a;
+}
+
+.mission-container .price {
+  margin-bottom: 9px;
+  color: #fefefe;
+  display: none;
+}
+
+.mission-container .price span {
+  color: #9dd72a;
+  font-weight: 700;
+}
+
+/* Date-time picker */
+.day-container {
+  width: 60%;
+  max-width: 200px;
+}
+
+.day-title {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.time-slot {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #777777;
+  border-bottom: none;
+  color: #777777;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.time-slot:last-child {
+  border-bottom: 1px solid #777777;
+}
+
+.time-slot.available {
+  background-color: #9dd72a;
+  color: #2d3915;
+}
+
+.time-slot.available.peak {
+  background-color: #eebb2a;
+  color: #2d3915;
+}
+
+.time-slot.available:hover {
+  -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+.day-container.selected .time-slot.available:hover,
+.day-container.selected .time-slot.selected {
+  /* here changed*/
+  transition: transform 1s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+/* Book button */
+#booking-container .book-button {
+  opacity: 0.5;
+  cursor: default;
+  transition: all 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+#booking-container .book-button.enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Second step */
+.error-messages {
+  background-color: #ce2710;
+  margin: 0 auto 18px;
+  padding: 18px;
+}
+
+.error-messages p {
+  margin: 0;
+}
+
+.selected-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-description {
+  text-align: right;
+  color: #9dd72a;
+}
+
+.game-description strong {
+  display: block;
+}
+
+.game-name {
+  line-height: 1.1;
+}
+
+.game-date-time {
+  font-size: 24px;
+}
+
+.change-game {
+  margin-left: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.info-input-group {
+  margin-top: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-input-group strong {
+  font-size: 24px;
+  display: block;
+  text-align: initial;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.info-input-group input,
+.info-input-group .input-group {
+  width: 100%;
+}
+
+.info-input-group .input-group input {
+  width: auto;
+}
+
+.input-help {
+  text-align: initial;
+  margin: 0;
+  font-size: 14px;
+  color: #a2a2a2;
+}
+
+.accept-disclosure {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.inline-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  text-decoration: none;
+}
