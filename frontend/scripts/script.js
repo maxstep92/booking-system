@@ -1,11 +1,17 @@
 $(document).ready(function(){	
+
+	/* time selection */
+	//TO DO set default values
+	var selected_time = '';
+	var selected_time_onfocus = '';
+
 	/*
 	*	starting parameters
 	*/
 	$('.day-container').attr('style', 'left: 0px;');
 
 	/*
-	*	event listener : onclick
+	*	event listener : onclick-scroll by day-time
 	*/
 	$('.day-container').on('click', function(event) {
 		/*
@@ -21,7 +27,7 @@ $(document).ready(function(){
 
 				if(!$(event.target).hasClass('time-slot selected')) {	
 					$(event.target).siblings('.time-slot').removeClass('selected');
-					$(event.target).addClass('selected');
+					selected_time = $(event.target).addClass('selected');
 				}
 			}
 
@@ -36,7 +42,7 @@ $(document).ready(function(){
 				//add new selection
 				$(this).addClass('selected');
 				if($(event.target).hasClass('time-slot')) {
-					$(event.target).addClass('selected');
+					selected_time = $(event.target).addClass('selected');
 				}
 
 				//change pixels of elements to make animation
@@ -45,4 +51,68 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	/*
+	*	event listener : onclick-scroll by arrows
+	*/
+	$('.day-carousel').on('click', function(event) {
+
+		if ($(event.target).hasClass('scroll-arrow')) {
+			selected_time_onfocus = $(this).find('.day-container.selected');
+			//remove old selection
+			var i = $('.day-container').index(selected_time_onfocus);
+
+			if($(event.target).hasClass('scroll-arrow-left') && (i-1) >= 0) {
+				selected_time_onfocus.children('.time-slot').removeClass('selected');
+				selected_time_onfocus.removeClass('selected');
+				selected_time = '';
+
+				var pixels = (i-1) * 200;
+				selected_time_onfocus = $('.day-container').get(i-1);
+
+				$(selected_time_onfocus).addClass('selected');
+
+				$('.day-container').attr('style', 'left: -' + pixels + 'px;');
+				
+			}
+
+			if($(event.target).hasClass('scroll-arrow-right') && (i+1) < $('.day-container').length) {
+				selected_time_onfocus.children('.time-slot').removeClass('selected');
+				selected_time_onfocus.removeClass('selected');
+				selected_time = '';
+
+				var pixels = (i+1) * 200;
+				
+				selected_time_onfocus = $('.day-container').get(i+1);
+				$(selected_time_onfocus).addClass('selected');
+
+				$('.day-container').attr('style', 'left: -' + pixels + 'px;');
+			}
+		}
+	});
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

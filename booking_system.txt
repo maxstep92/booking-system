@@ -5,18 +5,19 @@
 ===================
 
 FrontEnd Tasks:
+DONE ++++ SLIDER EVENT ON DATE-TIME +
 
-	= SLIDER EVENT to ARROWS =
+		= SLIDER EVENT to GAME selection =
 
-	= SLIDER EVENT to GAME selection =
+		= TEST SLIDER ON MOBILE SCREEN =
 
-	= enable RESERVATION BUTTON when GAME AND TIME selected =
+		= enable RESERVATION BUTTON when GAME AND TIME selected =
 
-	= on :hover DAY-TIME <DIV> -> create CSS STYLE and JS FUNCTION to display PRICE and how many SEATS are FREE =
+		= on :hover DAY-TIME <DIV> -> create CSS STYLE and JS FUNCTION to display PRICE and how many SEATS are FREE =
 
-	= when GAME selects by AJAX loads DAY-TIME <DIV> =
+		= when GAME selects by AJAX loads DAY-TIME <DIV> =
 
-	= collects which GAME and which TIME has been selected FURTHER STEPS -> send it to PHP script (AJAX -> JSON) =
+		= collects which GAME and which TIME has been selected FURTHER STEPS -> send it to PHP script (AJAX -> JSON) =
 
 BackEnd Tasks:
 	
