@@ -1,0 +1,131 @@
+{
+	"games" : [
+		{	
+		 	"day" : "5 kvě (So)",
+		 	"hours" : 
+		 	[
+		 		{
+		 			"hour" : "10:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "11:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "12:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "13:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "14:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "15:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "16:00",
+		 		 	"type" : "available "
+		 		},
+		 		{
+		 			"hour" : "17:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "18:00",
+		 		 	"type" : "available "
+		 		}
+		 	]
+		},
+        {	
+		 	"day" : "6 kvě (Ne)",
+		 	"hours" : 
+		 	[
+		 		{
+		 			"hour" : "10:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "11:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "12:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "13:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "14:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "15:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "16:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "17:00",
+		 		 	"type" : "available peak"
+		 		},
+		 		{
+		 			"hour" : "18:00",
+		 		 	"type" : "peak"
+		 		}
+		 	]
+		},
+
+		{	
+		 	"day" : "7 kvě (Po)",
+		 	"hours" : 
+		 	[
+		 		{
+		 			"hour" : "10:00",
+		 		 	"type" : "peak"
+		 		},
+		 		{
+		 			"hour" : "11:00",
+		 		 	"type" : "peak"
+		 		},
+		 		{
+		 			"hour" : "12:00",
+		 		 	"type" : "peak"
+		 		},
+		 		{
+		 			"hour" : "13:00",
+		 		 	"type" : "peak"
+		 		},
+		 		{
+		 			"hour" : "14:00",
+		 		 	"type" : "peak"
+		 		},
+		 		{
+		 			"hour" : "15:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "16:00",
+		 		 	"type" : "peak"
+		 		},
+		 		{
+		 			"hour" : "17:00",
+		 		 	"type" : "available"
+		 		},
+		 		{
+		 			"hour" : "18:00",
+		 		 	"type" : "available"
+		 		}
+		 	]
+		}
+	]
+}

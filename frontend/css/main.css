@@ -1,4 +1,5 @@
 /* Common styles */
+
 em {
   font-weight: 700;
   color: #9dd72a;
@@ -20,7 +21,7 @@ em {
 }
 
 .carousel-item {
-  padding: 16px;
+  padding: 30px 25px 16px 25px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   position: relative;
@@ -32,6 +33,7 @@ em {
 }
 
 .carousel-item.selected {
+  padding: 16px;
   opacity: 1;
 }
 
@@ -60,7 +62,7 @@ em {
   width: 40px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  opacity: 0.5;
+  visibility: hidden;
 }
 
 .scroll-arrow-left {
@@ -72,7 +74,7 @@ em {
 }
 
 .scroll-arrow.active {
-  opacity: 1;
+  visibility: visible;
 }
 
 /* Mission picker */
@@ -85,6 +87,7 @@ em {
   position: relative;
   width: 100%;
   margin-bottom: 9px;
+  cursor: pointer;
 }
 
 .mission-carousel .mission-image {
@@ -105,29 +108,19 @@ em {
           transform: translate(-50%, -50%);
 }
 
-.mission-image-info {
+.price {
   color: #2d3915;
   font-size: 14px;
-  margin: 2px 0;
+  margin: 1px 0;
+  visibility: hidden;
 }
 
-.mission-image-info.primary {
+.price.lower {
   background-color: #9dd72a;
 }
 
-.mission-image-info.secondary {
+.price.higher {
   background-color: #eebb2a;
-}
-
-.mission-container .price {
-  margin-bottom: 9px;
-  color: #fefefe;
-  display: none;
-}
-
-.mission-container .price span {
-  color: #9dd72a;
-  font-weight: 700;
 }
 
 /* Date-time picker */
@@ -135,7 +128,6 @@ em {
   width: 60%;
   max-width: 200px;
 }
-
 .day-title {
   width: 100%;
   padding: 10px;
@@ -181,6 +173,14 @@ em {
           transform: scale(1.1);
   background-color: #ffffff;
   border-color: transparent;
+}
+
+.day-container.selected > .day-title, 
+.day-container.selected > .time-slot {
+  font-size: 1.15em;
+  /*transition: font-size .2s ease-in-out;
+  -moz-transition: font-size .2s ease-in-out;
+  -webkit-transition: font-size .2s ease-in-out;*/
 }
 
 /* Book button */

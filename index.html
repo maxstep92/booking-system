@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./frontend/scripts/lib/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./frontend/scripts/lib/handlebars.min-latest.js"></script>
+	<script type="text/javascript" src="./frontend/scripts/script.js"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="./frontend/css/default.css">
+	<link rel="stylesheet" type="text/css" href="./frontend/css/main.css">
+	
+	<title>Booking system</title>
+</head>
+<body>
+	<div class="content" style="margin-top: 70px;">
+		<div id="booking-container" class="section">
+			<div id="game-selection-step">
+				<div class="carousel mission-carousel">
+					<div class="carousel-offset mission-carousel-offset">
+						<div id="first-game" class="carousel-item mission-container" style="">
+							<div class="mission-image-container">
+								<div class="mission-image" style="background-image: url(http://via.placeholder.com/300x200);">
+								</div>
+								<div class="price lower">1200 Kč</div>
+								<div class="price higher">1500 Kč</div>
+							</div>
+						</div>
+						<div id="second-game" class="carousel-item mission-container" style="">
+							<div class="mission-image-container">
+								<div class="mission-image" style="background-image: url(http://via.placeholder.com/300x200);"></div> 
+
+								<div class="price lower">1200 Kč</div>
+								<div class="price higher">1500 Kč</div>
+							</div>
+						</div>
+						<div id="third-game" class="carousel-item mission-container" style="">
+							<div class="mission-image-container">
+								<div class="mission-image" style="background-image: url(http://via.placeholder.com/300x200);"></div>
+								<div class="price lower">1200 Kč</div>
+								<div class="price higher">1500 Kč</div>
+							</div>
+						</div>
+					</div>
+					<img src="./frontend/media/icons/arrow-left.svg" class="game scroll-arrow scroll-arrow-left"> 
+					<img src="./frontend/media/icons/arrow-right.svg" class="game scroll-arrow scroll-arrow-right">
+				</div>
+				<div class="handlebar">
+					<!-- HANDLEBARS TEMPLATE DAYS HERE -->
+				</div>
+				<button class="primary medium book-button" style="">Rezervace</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- HANDLEBARS TEMPLATE DAYS -->
+	<script id="dayTemplate" type="text/x-handlebars-template">
+		<div class="carousel day-carousel">
+			<div class="carousel-offset day-carousel-offset">
+				{{#games}}
+					<div class="carousel-item day-container" style="">
+						<div class="day-title">{{day}}</div>
+							{{#hours}}
+								<div class="time-slot {{type}}">{{hour}}</div>
+							{{/hours}}
+					</div>
+				{{/games}}
+			</div>
+			<img src="./frontend/media/icons/arrow-left.svg" class="day scroll-arrow scroll-arrow-left"> 
+			<img src="./frontend/media/icons/arrow-right.svg" class="day scroll-arrow scroll-arrow-right">
+		</div>	
+	</script>
+</body>
+</html>
+
+

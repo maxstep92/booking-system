@@ -1,20 +1,20 @@
 {
 	"games" : [
-		 {	
+		{	
 		 	"day" : "5 kvě (So)",
 		 	"hours" : 
 		 	[
 		 		{
 		 			"hour" : "10:00",
-		 		 	"type" : "peak"
+		 		 	"type" : "available peak"
 		 		},
 		 		{
 		 			"hour" : "11:00",
-		 		 	"type" : "peak"
+		 		 	"type" : "available"
 		 		},
 		 		{
 		 			"hour" : "12:00",
-		 		 	"type" : "peak"
+		 		 	"type" : "available"
 		 		},
 		 		{
 		 			"hour" : "13:00",
@@ -41,22 +41,22 @@
 		 		 	"type" : "peak"
 		 		}
 		 	]
-		 },
-{	
+		},
+        {	
 		 	"day" : "6 kvě (Ne)",
 		 	"hours" : 
 		 	[
 		 		{
 		 			"hour" : "10:00",
-		 		 	"type" : "available peak"
+		 		 	"type" : "peak"
 		 		},
 		 		{
 		 			"hour" : "11:00",
-		 		 	"type" : "available peak"
+		 		 	"type" : "available "
 		 		},
 		 		{
 		 			"hour" : "12:00",
-		 		 	"type" : "peak"
+		 		 	"type" : "available peak"
 		 		},
 		 		{
 		 			"hour" : "13:00",
@@ -83,19 +83,19 @@
 		 		 	"type" : "peak"
 		 		}
 		 	]
-		 },
+		},
 
-		 {	
+		{	
 		 	"day" : "7 kvě (Po)",
 		 	"hours" : 
 		 	[
 		 		{
 		 			"hour" : "10:00",
-		 		 	"type" : "available peak"
+		 		 	"type" : "available"
 		 		},
 		 		{
 		 			"hour" : "11:00",
-		 		 	"type" : "available peak"
+		 		 	"type" : "available"
 		 		},
 		 		{
 		 			"hour" : "12:00",
@@ -103,7 +103,7 @@
 		 		},
 		 		{
 		 			"hour" : "13:00",
-		 		 	"type" : "peak"
+		 		 	"type" : "available peak"
 		 		},
 		 		{
 		 			"hour" : "14:00",
@@ -126,6 +126,6 @@
 		 		 	"type" : "available"
 		 		}
 		 	]
-		 }
+		}
 	]
 }
