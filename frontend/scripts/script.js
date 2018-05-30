@@ -19,7 +19,7 @@ function init() {
 	//initial data
 	var game_name = $('.mission-container.selected').attr('id');
 
-	getTemplateDays('./backend/data/' + game_name + '.json');
+	getTemplateDays('./backend/reservations');
 };
 
 function checkReservationButton() {
