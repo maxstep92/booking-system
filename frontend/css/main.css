@@ -181,7 +181,7 @@ em {
 
 .day-container.selected > .day-title, 
 .day-container.selected > .time-slot {
-  /*font-size: 1.3rem; >> implements as a zoom in js*/ 
+  font-size: 1.3rem; /*>> implements as a zoom in js*/ 
 }
 
 /* Book button */

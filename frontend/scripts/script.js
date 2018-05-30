@@ -172,7 +172,7 @@ function renderTemplate(data, callback) {
 	//arrow
 	$('.day.scroll-arrow-right').addClass('active');
 
-	$('.day-container.selected').children().css({"zoom": "130%"});
+	//$('.day-container.selected').children().css({"zoom": "130%"});
 
 	addEventsForTemplateDays();
 
@@ -204,7 +204,7 @@ function addEventsForTemplateDays() {
 		*	different day
 		*/
 		if (!$(this).hasClass('selected')) {
-			$('.day-container.selected').children().animate({"zoom": "100%"}, 80);
+			//$('.day-container.selected').children().animate({"zoom": "100%"}, 80);
 			//remove old selection
 			$(this).siblings('.selected').children('.time-slot').removeClass('selected');
 			$(this).siblings('.selected').removeClass('selected');
@@ -219,7 +219,7 @@ function addEventsForTemplateDays() {
 
 			//change pixels of elements to make animation
 			var pixels = i * 200;
-			$('.day-container.selected').children().animate({"zoom": "130%"}, 300);
+			//$('.day-container.selected').children().animate({"zoom": "130%"}, 300);
       		$('.day-container').attr('style', 'left: -' + pixels + 'px;');
  			checkArrows('day-container', i, 'day');
 		}
@@ -233,7 +233,7 @@ function addEventsForTemplateDays() {
 
 		if ($(event.target).hasClass('scroll-arrow')) {
 			var selected_time_onfocus = $(this).find('.day-container.selected');
-			$(selected_time_onfocus).children().animate({"zoom": "100%"}, 70);
+			//$(selected_time_onfocus).children().animate({"zoom": "100%"}, 70);
 
 			var i = $('.day-container').index(selected_time_onfocus);
 
@@ -247,7 +247,7 @@ function addEventsForTemplateDays() {
 				selected_time_onfocus = $('.day-container').get(i-1);
 				$(selected_time_onfocus).addClass('selected');
 
-				$('.day-container.selected').children().animate({"zoom": "130%"}, 180);
+				//$('.day-container.selected').children().animate({"zoom": "130%"}, 180);
 				$('.day-container').attr('style', 'left: -' + pixels + 'px;');
 
 				checkArrows('day-container', (i-1), 'day');
@@ -265,7 +265,7 @@ function addEventsForTemplateDays() {
 				selected_time_onfocus = $('.day-container').get(i+1);
 				$(selected_time_onfocus).addClass('selected');
 
-				$('.day-container.selected').children().animate({"zoom": "130%"}, 180);
+				//$('.day-container.selected').children().animate({"zoom": "130%"}, 180);
 				$('.day-container').attr('style', 'left: -' + pixels + 'px;');
 
 				checkArrows('day-container', (i+1), 'day');
