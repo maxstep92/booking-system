@@ -1,11 +1,12 @@
 <?php
 require 'lib/Slim/Slim.php';
-require 'viewmodel/Day.php';
+require 'view/ViewReservations.php';
 
 $app = new Slim();
+$view = new ViewReservations();
 
 //get reservations
-$app->get('/reservations', 'getReservations');
+$app->get('/reservations', $view->getReservations());
 
 //post reservation
 $app->post('/reservations', 'saveReservation');
@@ -14,21 +15,5 @@ $app->post('/reservations', 'saveReservation');
 $app->delete('/reservations/:id', 'deleteReservation');
 
 $app->run();
-
-
-function getReservations() {
-	$day = new Day(date('Y-m-d'), 10, 18);
-	$nextDay = new Day(date('Y-m-d', strtotime('+1 day')), 10, 18);
-	
-	echo '{"games":'. json_encode(array($day, $nextDay)) .'}';
-}
-
-function saveReservations() {
-
-}
-
-function deleteReservation() {
-
-}
 
 ?>

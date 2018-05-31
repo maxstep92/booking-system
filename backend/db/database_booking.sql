@@ -69,17 +69,11 @@ CREATE TABLE IF NOT EXISTS `booking`.`reservations` (
 	`timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	`people` TINYINT UNSIGNED NOT NULL,
 	`total_cost` SMALLINT UNSIGNED,
-	`langid` TINYINT UNSIGNED, -- foreign key language.langid
 	`contactinfoid` INT UNSIGNED, -- foreign key contactinfo.contactinfoid
 	`serviceid` TINYINT UNSIGNED, -- foreign key service.serviceid
+	`langname` CHAR(3), -- name of language 
 
 	PRIMARY KEY (`reservationid`),
-
-	CONSTRAINT `fk_reserv_langid`
-		FOREIGN KEY (`langid`)
-		REFERENCES `booking`.`language`(`langid`)
-		ON DELETE NO ACTION
-		ON UPDATE NO ACTION,
 
 	CONSTRAINT `fk_reserv_contactinfoid`
 		FOREIGN KEY (`contactinfoid`)
