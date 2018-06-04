@@ -20,3 +20,17 @@ VALUES
 	('ENG', (SELECT `serviceid` 
 			 FROM `service`
 			 WHERE `name` = 'GAME_2'));
+
+---------------------------------
+-- Add data to RESERVATIONS
+---------------------------------
+
+INSERT INTO reservations 
+	(date, time, people, total_cost, contactinfoid, serviceid, langname)
+VALUES
+	('2018-05-31', '11:00:00', 4, 
+		(select price*4 from service where name='GAME_1'),  
+		(select contactinfoid from contactinfo where email='developer.stepanov@gmail.com'), 
+		(select serviceid from service where name='GAME_1'), 'CZK');
+
+

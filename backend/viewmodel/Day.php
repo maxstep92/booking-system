@@ -6,17 +6,12 @@ class Day {
 	var $day;
 	var $hours = array();
 
-	function __construct($day, $from_time, $to_time, $duration) {
+	function __construct($day) {
 		$this->day = $day;
-		$this->initHours($from_time, $to_time, $duration);
 	}
 
-	function initHours($start, $end, $duration) {
-		for($i=$start; $i < $end; $i=$i+$duration) {
-
-			$hour = $this->getHour($i);
-			$this->hours[] = new Hour($hour, 'available');
-		}
+	function addHour($hour, $type) {
+		$this->hours[] = new Hour($this->getHour($hour), $type);
 	}
 
 	function getHour($hour) {

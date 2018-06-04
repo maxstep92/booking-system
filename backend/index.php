@@ -6,7 +6,7 @@ $app = new Slim();
 $view = new ViewReservations();
 
 //get reservations
-$app->get('/reservations', $view->getReservations());
+$app->get('/reservations', $view->getReservationsJSON());
 
 //post reservation
 $app->post('/reservations', 'saveReservation');
