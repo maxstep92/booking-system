@@ -3,15 +3,20 @@ require 'viewmodel/Hour.php';
 
 class Day {
 
-	var $day;
+	var $date;
 	var $hours = array();
 
-	function __construct($day) {
-		$this->day = $day;
+	function __construct($date) {
+		$this->getDate($date);
 	}
 
 	function addHour($hour, $type) {
 		$this->hours[] = new Hour($this->getHour($hour), $type);
+	}
+
+	function getDate($date) {
+		$date = strtotime($date);
+		$this->date = date('j F', $date);
 	}
 
 	function getHour($hour) {

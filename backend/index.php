@@ -1,19 +1,42 @@
 <?php
-require 'lib/Slim/Slim.php';
-require 'view/ViewReservations.php';
+require 'lib/vendor/autoload.php';
+require 'view/Json.php';
+//require 'repository/Repository.php';
 
-$app = new Slim();
-$view = new ViewReservations();
+$app = new \Slim\App();
 
-//get reservations
-$app->get('/reservations', $view->getReservationsJSON());
+// $app->get('/', function ($request, $response, $args) {
 
-//post reservation
-$app->post('/reservations', 'saveReservation');
+// 	$rep = new Repository();
 
-//delete reservation
-$app->delete('/reservations/:id', 'deleteReservation');
+// 	$response->
+// 		getBody()->
+// 			write($rep->getServiceByName('game_1'));
+// });
+
+//get reservations = /reservations?game=1&amount=2
+$app->get('/reservations', function ($request, $response, $args) {
+	$game_name = $request->getQueryParam('game');
+	$amount_players = (int)$request->getQueryParam('amount');
+
+	$json = new Json();
+
+	$response->
+		getBody()->
+			write($json->getReservations($game_name, $amount_players));
+});
 
 $app->run();
+
+//get reservations
+// $app->get('/reservations', $view->getReservationsJSON());
+
+//post reservation
+// $app->post('/reservations', 'saveReservation');
+
+//delete reservation
+// $app->delete('/reservations/:id', 'deleteReservation');
+
+// $app->run();
 
 ?>
